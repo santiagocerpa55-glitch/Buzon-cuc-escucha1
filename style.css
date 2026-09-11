@@ -1,0 +1,282 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+    line-height: 1.6;
+}
+
+.encabezado {
+    background: #173b70;
+    color: white;
+}
+
+.navegacion {
+    max-width: 1150px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #f5bd43;
+}
+
+.enlaces {
+    display: flex;
+    gap: 25px;
+}
+
+.enlaces a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.enlaces a:hover {
+    color: #f5bd43;
+}
+
+.hero {
+    max-width: 1150px;
+    margin: auto;
+    padding: 80px 20px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.etiqueta {
+    color: #c78a16;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    color: #5d687b;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.boton {
+    display: inline-block;
+    background: #e3a72f;
+    color: #172033;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.boton:hover {
+    background: #c88e1e;
+}
+
+.hero-ilustracion {
+    background: #102c57;
+    color: white;
+    border-radius: 25px;
+    padding: 55px 30px;
+    text-align: center;
+}
+
+.sobre-icono {
+    font-size: 75px;
+    margin-bottom: 15px;
+}
+
+.hero-ilustracion h2 {
+    font-size: 27px;
+}
+
+.hero-ilustracion p {
+    color: #dce5f2;
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+
+.seccion {
+    max-width: 1150px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.seccion h2 {
+    font-size: 35px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    color: #5d687b;
+    max-width: 700px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.tarjeta {
+    background: white;
+    border: 1px solid #e0e6ef;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.tarjeta span {
+    color: #c78a16;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.tarjeta h3 {
+    margin: 15px 0 10px;
+    font-size: 21px;
+}
+
+.tarjeta p {
+    color: #5d687b;
+}
+
+.formulario-seccion {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.formulario-intro p:not(.etiqueta) {
+    color: #5d687b;
+}
+
+.formulario {
+    background: white;
+    border: 1px solid #e0e6ef;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.formulario label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 7px;
+    margin-top: 18px;
+}
+
+.formulario label:first-child {
+    margin-top: 0;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    border: 1px solid #ccd5e2;
+    border-radius: 7px;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 14px;
+    background: #fbfcfe;
+    color: #172033;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: 2px solid #e3a72f;
+    border-color: #e3a72f;
+}
+
+.formulario .boton {
+    margin-top: 25px;
+    width: 100%;
+}
+
+.mensaje {
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.pie {
+    background: #102c57;
+    color: #dce5f2;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 13px;
+}
+
+@media (max-width: 750px) {
+    .navegacion {
+        flex-direction: column;
+    }
+
+    .enlaces {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 50px 20px;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario-seccion {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .seccion {
+        padding: 50px 20px;
+    }
+}

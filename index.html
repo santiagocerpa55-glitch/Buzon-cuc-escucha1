@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzón CUC Escucha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <nav class="navegacion">
+            <a href="#inicio" class="logo">CUC <span>Escucha</span></a>
+            <div class="enlaces">
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre">Sobre el buzón</a>
+                <a href="#formulario">Enviar sugerencia</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-contenido">
+                <p class="etiqueta">UNIVERSIDAD DE LA COSTA</p>
+                <h1>Tu voz construye una mejor universidad.</h1>
+                <p>
+                    Comparte tus ideas, propuestas y sugerencias para mejorar
+                    la experiencia de todos los estudiantes.
+                </p>
+                <a href="#formulario" class="boton">Dejar una sugerencia</a>
+            </div>
+
+            <div class="hero-ilustracion">
+                <div class="sobre-icono">✉</div>
+                <h2>Buzón CUC Escucha</h2>
+                <p>Tu opinión importa.</p>
+            </div>
+        </section>
+
+        <section id="sobre" class="seccion">
+            <p class="etiqueta">¿CÓMO FUNCIONA?</p>
+            <h2>Un espacio para ser escuchados</h2>
+            <p class="descripcion">
+                Este buzón permite compartir ideas relacionadas con el
+                bienestar, los servicios, las clases, la inclusión y los
+                procesos académicos de la institución.
+            </p>
+
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <span>01</span>
+                    <h3>Comparte tu idea</h3>
+                    <p>Cuéntanos qué aspecto de la universidad te gustaría mejorar.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <span>02</span>
+                    <h3>Explica tu propuesta</h3>
+                    <p>Describe tu sugerencia de forma clara y respetuosa.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <span>03</span>
+                    <h3>Construyamos juntos</h3>
+                    <p>Tus aportes ayudan a identificar oportunidades de mejora.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="formulario" class="seccion formulario-seccion">
+            <div class="formulario-intro">
+                <p class="etiqueta">BUZÓN DE SUGERENCIAS</p>
+                <h2>¿Qué te gustaría mejorar?</h2>
+                <p>
+                    Diligencia el formulario y comparte tu opinión con la
+                    comunidad universitaria.
+                </p>
+            </div>
+
+            <form id="sugerenciaForm" class="formulario">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre"
+                       placeholder="Escribe tu nombre" required>
+
+                <label for="correo">Correo institucional</label>
+                <input type="email" id="correo" name="correo"
+                       placeholder="ejemplo@cuc.edu.co" required>
+
+                <label for="categoria">Categoría de la sugerencia</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="">Selecciona una categoría</option>
+                    <option value="Bienestar">Bienestar</option>
+                    <option value="Servicios">Servicios</option>
+                    <option value="Clases">Clases</option>
+                    <option value="Inclusión">Inclusión</option>
+                    <option value="Espacios">Espacios</option>
+                    <option value="Procesos académicos">Procesos académicos</option>
+                </select>
+
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto"
+                       placeholder="Título de tu sugerencia" required>
+
+                <label for="sugerencia">Descripción de la sugerencia</label>
+                <textarea id="sugerencia" name="sugerencia" rows="5"
+                          placeholder="Cuéntanos tu idea..." required></textarea>
+
+                <button type="submit" class="boton">Enviar sugerencia</button>
+                <p id="mensaje" class="mensaje" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>Buzón CUC Escucha · Proyecto académico · Unidad 1</p>
+        <p>Universidad de la Costa · 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<label for="tipo">Tipo de sugerencia</label>
+<select id="tipo" name="tipo" required>
+    <option value="">Selecciona una opción</option>
+    <option value="Idea">Idea</option>
+    <option value="Queja">Queja</option>
+    <option value="Reconocimiento">Reconocimiento</option>
+</select>
